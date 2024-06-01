@@ -15,3 +15,11 @@ function curry(fn) {
     }
   }
 }
+
+function sum(a, b, c) {
+  return a + b + c;
+}
+let curriedSum = curry(sum);
+console.log( curriedSum(1, 2, 3) );
+console.log( curriedSum(1)(2,3) );
+console.log( curriedSum(1)(2)(3) );
